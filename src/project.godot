@@ -377,7 +377,7 @@ _global_script_classes=[ {
 "base": "RichTextLabel",
 "class": "TranslatedRichTextLabel",
 "language": "GDScript",
-"path": "res://Data/UI/translated_rich_rext_label.gd"
+"path": "res://Data/UI/translated_rich_text_label.gd"
 }, {
 "base": "RailLogic",
 "class": "WarnSpeedLimit",

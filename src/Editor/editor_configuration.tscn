@@ -9,7 +9,7 @@
 [ext_resource path="res://Data/UI/styles/item_list.tres" type="Theme" id=7]
 [ext_resource path="res://Data/UI/styles/button_right.tres" type="Theme" id=8]
 [ext_resource path="res://Data/UI/styles/button_center.tres" type="Theme" id=9]
-[ext_resource path="res://Data/UI/translated_rich_rext_label.gd" type="Script" id=10]
+[ext_resource path="res://Data/UI/translated_rich_text_label.gd" type="Script" id=10]
 [ext_resource path="res://Data/UI/styles/line_edit.tres" type="Theme" id=11]
 [ext_resource path="res://Data/UI/styles/button_left.tres" type="Theme" id=12]
 
