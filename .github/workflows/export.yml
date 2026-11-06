@@ -14,9 +14,9 @@ env:
   EXPORT_NAME: Libre_TrainSim
 
 jobs:
-  # Fast feedback: ensure the project parses and loads without a full export (Godot 3.x --check-only).
+  # Fast feedback: parse all GDScripts without loading scenes (works in minimal checkouts).
   validate-project:
-    name: Validate project (headless)
+    name: Validate GDScript
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,8 +30,8 @@ jobs:
       - name: Extract Godot
         run: unzip -d .. ../Godot_v${{ env.GODOT_VERSION }}-stable_linux_headless.64.zip && chmod +x ../Godot_v${{ env.GODOT_VERSION }}-stable_linux_headless.64
 
-      - name: Check project loads
-        run: ../Godot_v${{ env.GODOT_VERSION }}-stable_linux_headless.64 --path src --check-only -q
+      - name: Parse all GDScript files
+        run: ../Godot_v${{ env.GODOT_VERSION }}-stable_linux_headless.64 --path src -q -s res://tools/ci_validate_scripts.gd
 
   export-windows:
     if: false # Disabled because @HaSa can't wrap his head around Godot not wanting to properly start and terminate.

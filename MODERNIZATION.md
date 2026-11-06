@@ -4,7 +4,7 @@ This document tracks **incremental** technical improvements. A full **Godot 4** 
 
 ## Done in this repository (ongoing)
 
-- CI validates that the project **loads in headless mode** (`--check-only`) on every PR and push to `master`, in addition to existing export jobs.
+- CI runs **`src/tools/ci_validate_scripts.gd`**: parses every `.gd` file via `GDScript.reload()` so **syntax errors fail the build** without requiring a full asset import or export.
 - GitHub Actions use maintained action versions (`v4`) where applicable.
 - Obvious script path typo fixed: `translated_rich_text_label.gd` (was `rext`).
 

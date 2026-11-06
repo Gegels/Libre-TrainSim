@@ -26,7 +26,7 @@ Fork and clone the repository. This project targets **Godot 3.5.x** (see `.githu
 
 ### CI and local checks
 
-Pull requests run a **headless project check** (`--check-only`) so broken scenes or scripts are caught before a full export. To run the same check locally (requires a Godot 3.x binary):
+Pull requests run a **GDScript parse check** (see `src/tools/ci_validate_scripts.gd`) so syntax errors in scripts are caught before a full export. To run the same check locally (requires a Godot 3.x binary):
 
 ```bash
 export GODOT_BIN="/path/to/Godot_v3.5.2-stable_linux_headless.64"
